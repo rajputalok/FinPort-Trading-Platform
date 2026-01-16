@@ -25,10 +25,18 @@ app.use(express.urlencoded({ extended: true}));
 
 app.use(
   cors({
-    origin: true,
-    credentials: true,
+    origin: ["https://finport-trading-platform-frontend.onrender.com",
+        "https://finport-trading-platform-dashboard.onrender.com"
+    ],
+    credentials: true
   })
 );
+
+res.cookie("token",token, {
+    httpOnly: true,
+    secure: true,
+    sameSite: "none",
+});
 
 // app.get("/addHoldings", async(req, res) => {
 //     let tempHoldings = [

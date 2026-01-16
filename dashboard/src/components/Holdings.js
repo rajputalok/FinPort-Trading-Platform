@@ -8,7 +8,7 @@ const Holdings = () => {
   const generalContext = useContext(GeneralContext);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
+    axios.get("https://finport-trading-platform-backend.onrender.com/allHoldings").then((res) => {
       setAllHoldings(res.data);
     })
   }, []);

@@ -7,7 +7,7 @@ const Summary = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:3002/getUser", { withCredentials: true });
+        const response = await axios.get("https://finport-trading-platform-backend.onrender.com/getUser", { withCredentials: true });
         if (response.data.status) {
           setUsername(response.data.user);
         }

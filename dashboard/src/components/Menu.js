@@ -11,7 +11,7 @@ const Menu = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:3002/getUser", { withCredentials: true });
+        const response = await axios.get("https://finport-trading-platform-backend.onrender.com/getUser", { withCredentials: true });
         if (response.data.status) {
           setUsername(response.data.user);
         }
@@ -32,12 +32,12 @@ const Menu = () => {
   const handleLogout = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/logout",
+        "https://finport-trading-platform-backend.onrender.com/logout",
         {},
         { withCredentials: true }
       );
       if (data.success) {
-        window.location.href = "http://localhost:3000";
+        window.location.href = "https://finport-trading-platform-frontend.onrender.com";
       }
     } catch (error) {
       console.error("Logout failed", error);

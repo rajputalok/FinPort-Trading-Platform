@@ -33,7 +33,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/signup",
+        "https://finport-trading-platform-backend.onrender.com/signup",
         {
           ...inputValue,
         },

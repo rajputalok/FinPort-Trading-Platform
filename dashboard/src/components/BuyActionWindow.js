@@ -14,7 +14,7 @@ const BuyActionWindow = ({ uid }) => {
   const {closeBuyWindow} = useContext(GeneralContext);
 
   const handleBuyClick = () => {
-    axios.post("http://localhost:3002/newOrder", {
+    axios.post("https://finport-trading-platform-backend.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,

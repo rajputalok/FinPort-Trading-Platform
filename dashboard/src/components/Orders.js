@@ -8,7 +8,7 @@ const Orders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get("http://localhost:3002/allOrders");
+        const response = await axios.get("https://finport-trading-platform-backend.onrender.com/allOrders");
         setOrders(response.data);
       } catch (error) {
         console.error("Error fetching orders:", error);
