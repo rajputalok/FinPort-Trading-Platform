@@ -32,12 +32,6 @@ app.use(
   })
 );
 
-res.cookie("token",token, {
-    httpOnly: true,
-    secure: true,
-    sameSite: "none",
-});
-
 // app.get("/addHoldings", async(req, res) => {
 //     let tempHoldings = [
 //   {
