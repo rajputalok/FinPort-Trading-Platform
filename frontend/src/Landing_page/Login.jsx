@@ -43,7 +43,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "https://finport-trading-platform-dashboard.onrender.com";
+          window.location.replace("https://finport-trading-platform-dashboard.onrender.com");
         }, 1000);
       } else {
         handleError(message);
